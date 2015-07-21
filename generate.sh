@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t dnpa/dnsgeo .
+cat Dockerfile | envsubst | docker build -t dnpa/dnsgeo -
