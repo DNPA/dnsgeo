@@ -247,8 +247,8 @@
     dep_syslog_module.init("geodns.js", dep_syslog_module.LOG_PID | dep_syslog_module.LOG_ODELAY, dep_syslog_module.LOG_LOCAL0);
     //Set the Google Geolocation API key using the api.json content.
     googleapi.setkey(dep_settings_json.apikey);
-    //Set the maximum per-sensor API request rate to one query per 30 seconds.
-    dep_setinterval_builtin(tempstore.flush, 30000);
+    //Set the maximum per-sensor API request rate to one query per 15 minutes.
+    dep_setinterval_builtin(tempstore.flush, 900000);
     //Run the DNS server.
     dnsserver.run();
 }(require('https'),        //https module dependency for calling the Google Geolocation API
