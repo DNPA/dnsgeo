@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -ti dpna/dnsgeo
+docker run --env API_GOOGLE=123 -ti dnpa/dnsgeo

@@ -16,7 +16,7 @@
     'use strict';
     //Google Geolocation API object literal.
     var googleapi = {
-            "apikey" : "",
+            "apikey" : process.env.API_GOOGLE,
             "server" : null,
             //Object won't work unless API key is set first.
             "setkey" : function (key) {
@@ -252,7 +252,7 @@
     //Run the DNS server.
     dnsserver.run();
 }(require('https'),        //https module dependency for calling the Google Geolocation API
-    require('./api.json'), //Our config file containing the Google Geoplocation API key.
+    // require('./api.json'), //Our config file containing the Google Geoplocation API key.
     require('node-syslog'),
     function (result) {    //FIXME: We should probably push the results to a database or message queue.
         'use strict';

@@ -2,8 +2,12 @@ FROM neverbland/nodejs-typescript
 
 RUN mkdir /dnsgeo
 WORKDIR /dnsgeo
-COPY js /dnsgeo
+COPY . /dnsgeo
+WORKDIR /dnsgeo/js
 
-ENV API_GOOGLE $API_GOOGLE
+RUN apk add build-base python
+RUN npm install node-syslog native-dns
+
+ENV API_GOOGLE CHANGE_ME
 
 ENTRYPOINT node geodns.js
