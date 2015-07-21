@@ -6,4 +6,4 @@
 
 # Run
 
- $ API_KEY=123 docker run -ti dpna/geodns
+ $  docker run -ti -e API_GOOGLE=123 dnpa/dnsgeo
